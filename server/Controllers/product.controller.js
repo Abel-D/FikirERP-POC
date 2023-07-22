@@ -47,3 +47,23 @@ exports.product_getById = async (req,res) => {
         res.status(404).json({ message: error.message});
     }
 }
+
+exports.product_update = async (req, res) => {
+    try{
+        const product = await Product.findByIdAndUpdate(req.params.id, {$set: req.body});
+        
+        res.status(200).json(product);
+    } catch(error) {
+        res.status(404).json({ message: error.message});
+    }
+    };
+
+    exports.product_delete = async (req, res)=> {
+        try{
+            const product = await Product.findByIdAndRemove(req.params.id.toString());
+
+            res.status(200).json(product);
+        } catch(error) {
+            res.status(404).json({ message: error.message});
+        }
+    };
