@@ -30,10 +30,20 @@ exports.product_create = async (req, res) =>{
 
 exports.product_getAll = async (req, res) => {
     try {
-        const item= await Product.find();
+        const product= await Product.find();
         
-        res.status(200).json(item);
+        res.status(200).json(product);
     } catch(error) {
         res.status(404).json({message: error.message});
+    }
+}
+
+exports.product_getById = async (req,res) => {
+    const productId = req.params.productId;
+    try {
+        const product = await Product.findOne({productId: productId});
+        res.status(200).json(product);
+    } catch(error) {
+        res.status(404).json({ message: error.message});
     }
 }
