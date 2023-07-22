@@ -27,3 +27,13 @@ exports.product_create = async (req, res) =>{
         res.status(400).json({ message : error.message});
     }
 };
+
+exports.product_getAll = async (req, res) => {
+    try {
+        const item= await Product.find();
+        
+        res.status(200).json(item);
+    } catch(error) {
+        res.status(404).json({message: error.message});
+    }
+}
