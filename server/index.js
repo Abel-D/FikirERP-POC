@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const product = require('./server/routes/product.route'); 
+const product = require('./routes/product.route'); 
+const sales = require('./routes/sales.route');
 const app = express();
 
 // Set up mongoose connection
