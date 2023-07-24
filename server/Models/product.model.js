@@ -5,8 +5,9 @@ let ProductSchema = new Schema({
     // date: {type: Date, required: true},
     productId: { type: String},
     name: {type: String, max: 100},
-    quantity: {type: Number},
-    price: {type: Number},
+    category: {type: Number},
+    measurment: {type: Number},
+    price:{type: Number}
 });
 
 module.exports = mongoose.model('Product', ProductSchema);

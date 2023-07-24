@@ -4,7 +4,7 @@ const mongoose =require('mongoose');
 const Product = require('../models/product.model');
 
 exports.test = function (req, res) {
-    res.send('Greetings from the Test controller!');
+    res.send('hello');
 };
 
 exports.product_create = async (req, res) =>{
