@@ -1,0 +1,11 @@
+FROM node:17-alpine as builder
+WORKDIR /app
+COPY package-lock.json
+RUN yarn install
+COPY ..
+RUN yarn build
+
+FROM nginx:1.19.0
+WORKDIR ../../tmp
+RUN rm -rf ./*
+ENTRYPOINT ["nginx","-g","daemon off;"]
