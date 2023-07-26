@@ -28,14 +28,11 @@ class LandingPageComponent extends React.Component {
         return(
         <div id="wrapper">
            <div className="grid grid-nogutter surface-0 text-800 h-screen">
-           <div className="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
-        
-               <section>
-               <LoginPageComponent/>
-                   
+           <div className="col-12 md:col-6 text-center md:text-left flex align-items-center ">
+               <section className="w-full">
+                   <LoginPageComponent/>                
                 </section>
-            </div>
-        
+            </div>        
            <div className="col-12 md:col-6 overflow-hidden">
                 <img src={require("./../../Assets/images/fikir-waters.PNG")} alt="landing" className="md:ml-auto block md:h-full" style={{ clipPath: 'polygon(8% 0, 100% 0%, 100% 100%, 0 100%)' }} />
             </div>

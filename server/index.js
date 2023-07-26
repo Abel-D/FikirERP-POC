@@ -1,6 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const product = require('./routes/product.route'); 
+<<<<<<< HEAD
+const sales = require('./routes/sales.route');
+=======
+>>>>>>> master
 const app = express();
 const cors = require('cors');
 
