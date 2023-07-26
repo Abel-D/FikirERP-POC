@@ -2,11 +2,12 @@ import React, {Component} from 'react';
 import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
 //import { Checkbox } from 'primereact/checkbox';
+import { useNavigate } from 'react-router-dom';
 
-export default class LoginPageComponent extends Component{
+const LoginPageComponent= () =>{
 
-render(){
-    
+const navigate = useNavigate();
+
     return (
     <div className="flex align-items-center justify-content-center">
     <div className="surface-card p-4 shadow-2 border-round w-full lg:w-6">
@@ -32,10 +33,10 @@ render(){
                 <a href="../Assets/images/fikir-logo-2-1.png" className="font-medium no-underline ml-2 text-blue-500 text-right cursor-pointer">Forgot your password?</a>
             </div>
 
-            <Button label="Sign In" icon="pi pi-user" className="w-full" />
+            <Button label="Sign In" onClick={() => navigate('/dashboard')} icon="pi pi-user" className="w-full" />
         </div>
     </div>
 </div>
     )
-                }
-            }
+}
+export default LoginPageComponent;

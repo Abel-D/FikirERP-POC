@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import { Dialog } from 'primereact/dialog';
 import { Button } from 'primereact/button';
 
-export default class LandingDashboardComponent extends Component{
+const LandingDashboardComponent = () =>{
 
-render(){
+
 
 return (
 <div className="surface-0 text-center">
@@ -62,4 +62,4 @@ return (
     
 );
 }
-}
+export default LandingDashboardComponent;
