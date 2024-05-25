@@ -1,6 +1,4 @@
 # FikirERP-POC
-This is a node.js server and reactjs client web application utilizing MongoDB database intended to serve as a proof of concept.
-
 ## server
 ### Dependencies
 cors 2.8.5
